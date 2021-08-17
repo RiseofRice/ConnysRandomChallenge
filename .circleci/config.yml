@@ -1,6 +1,14 @@
 version: 2.1
 
 orbs:
+  heroku: circleci/heroku@1.2.6
+  workflows:
+    example-workflow:
+      jobs:
+        - heroku/deploy-via-git:
+            api-key: '77e73c50-fcc7-40c0-8a67-e7fdf1dfb9ad' 
+            app-name: connyschallengetool 
+            branch: master 
   # The python orb contains a set of prepackaged CircleCI configuration you can use repeatedly in your configuration files
   # Orb commands and jobs help you with common scripting around a language/tool
   # so you dont have to copy and paste it everywhere.
